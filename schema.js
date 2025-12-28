@@ -12,7 +12,7 @@ const listingSchema = Joi.object({
         image: Joi.object({
             url: Joi.string().uri().required(), // Ensure it's a valid URL
             filename: Joi.string().allow("", null) // Optional filename field
-        }).required() // Make the image object required
+        }).optional() // Make the image object required
     }).required()
 });
 
